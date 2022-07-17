@@ -1,0 +1,288 @@
+h1 {
+    text-align: center;
+}
+body {
+    background-color: rgb(189, 188, 188);
+    margin: 0;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+    width: 800px;
+}
+.language .key {
+    height: 25px;
+    margin: 0 5px;
+}
+.text-area {
+    width: 80vw;
+    height: 55vh;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    tab-size: 4;
+    margin-top: 30px;
+    padding: 10px 10px;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 800px;
+    height: 280px;
+    /* margin-top: 10px; */
+}
+
+.keyboard_row-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row-three {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row-four {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row-five {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.key {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.key:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.key div {
+    width: 12px;
+    height: 15px;
+    margin-top: 0px; 
+}
+
+.letter {
+    color: white;
+}
+
+.letter div:last-child {
+    display: none;
+}
+
+.letter-ru  {
+    color: white;
+}
+
+.letter-ru div:first-child {
+    display: none;
+}
+
+.keyboard_row-one > .key:last-child {
+    width: 124px;
+}
+
+.keyboard_row-two > .key:first-child {
+    width: 67px;
+}
+
+.keyboard_row-two > .key:last-child {
+    width: 50px;
+}
+
+.keyboard_row-three > .key:first-child {
+    width: 111px;
+}
+
+.keyboard_row-three > .key:last-child {
+    width: 110px;
+}
+
+.keyboard_row-four > .key:first-child {
+    width: 124px;
+}
+
+.keyboard_row-five > .key:nth-child(1) {
+    width: 60px;
+}
+
+.keyboard_row-five > .key:nth-child(6) {
+    width: 60px;
+}
+
+.keyboard_row-five > .key:nth-child(4) {
+    width: 354px;
+}
+
+.arrow-up span {
+    transform: rotate(-90deg);
+}
+
+.arrow-down span {
+    transform: rotate(90deg);
+}
+
+.arrow-left span {
+    transform: rotate(-180deg);
+}
+
+.key-animation {
+    animation-fill-mode: forwards;
+    animation-duration: 0.1s;
+    animation-name: press;
+  }
+  
+  @keyframes press {
+    from {
+        transform: scale(1);
+    }
+  
+    to {
+      transform: scale(0.9);
+      background-color: rgba(0, 0, 0, 0.6)
+    }
+  }
+
+.caps-active span{
+    border-bottom: 2px solid white;
+    text-shadow: 1px 1px 2px white, -1px -1px 2px white;
+}
+
+/* For mobile*/
+
+  @media (max-width: 820px) {
+    .text-area {
+        width: 80vw;
+        height: 35vh;
+        font-family: 'Roboto';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        margin-top: 15px;
+        padding: 5px 5px;
+    }
+    .keyboard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 340px;
+        height: 240px;
+        margin-top: 5px;
+    }
+    .key {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 20px;
+        height: 45px;
+        background-color: black;
+        color: white;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+    .key div {
+        width: 12px;
+        height: 15px;
+        margin-top: 0px; 
+    }
+    .language {
+        width: 340px;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    .keyboard_row-one > .key:last-child {
+        width: 60px;
+    }
+    
+    .keyboard_row-two > .key:first-child {
+        width: 37px;
+    }
+    
+    .keyboard_row-two > .key:last-child {
+        width: 25px;
+    }
+    
+    .keyboard_row-three > .key:first-child {
+        width: 61px;
+    }
+    
+    .keyboard_row-three > .key:last-child {
+        width: 40px;
+    }
+    
+    .keyboard_row-four > .key:first-child {
+        width: 34px;
+    }
+    .keyboard_row-four > .key:last-child {
+        width: 19px;
+        font-size: 10px;
+    }
+    
+    .keyboard_row-five > .key:nth-child(2) {
+        width: 30px;
+    }
+    .keyboard_row-five > .key:nth-child(1) {
+        width: 30px;
+    }
+    
+    .keyboard_row-five > .key:nth-child(6) {
+        width: 30px;
+    }
+    
+    .keyboard_row-five > .key:nth-child(4) {
+        width: 129px;
+    }
+    
+  }
+
+
