@@ -1,7 +1,7 @@
 (() => {
     document.body.insertAdjacentHTML('beforeend', 
     `<div class="panel">
-    <textarea class="text-area"></textarea>
+    <textarea readonly class="text-area"></textarea>
     <div class="language">Language: <div class="key">EN</div>Alt+Shift for change</div>
     <div class="keyboard" onmousedown="return false">
         <div class="keyboard_row-one">
